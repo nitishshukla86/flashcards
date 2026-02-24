@@ -1,4 +1,4 @@
-const CARDS = [
+export const CARDS = [
     {
       id:1, lc:1, title:"Two Sum", topic:"Arrays", difficulty:"Easy",
       question:"Given an array of integers nums and an integer target, return indices of the two numbers that add up to target. Exactly one solution exists.",

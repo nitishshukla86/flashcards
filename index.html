@@ -762,24 +762,17 @@ const COMPANY_MAP = {
   100:["Amazon","Meta","Google","Microsoft"],
 };
 
-<script src="cards.js"> </script>
+import { CARDS } from "./cards";
 
-<script>
-  let mastered = JSON.parse(localStorage.getItem('mastered') || '{}');
-  let activeTopics = ['all'];
-  let activeDiff   = 'all';
-  let activeStatus = 'all';
-  let activeCompany= 'all';
-  let searchQuery  = '';
-
-  function saveMastered() {
-    localStorage.setItem('mastered', JSON.stringify(mastered));
-  }
-
-  console.log(CARDS); // should work
-</script>
-
-
+// export default function App() {
+//   return (
+//     <div>
+//       {CARDS.map(card => (
+//         <div key={card.id}>{card.title}</div>
+//       ))}
+//     </div>
+//   );
+// }
 // ─── State ───────────────────────────────────────────
 let mastered = JSON.parse(localStorage.getItem('mastered') || '{}');
 let activeTopics = ['all'];
