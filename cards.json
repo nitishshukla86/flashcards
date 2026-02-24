@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "lc": 1,
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "topic": "Arrays",
+      "difficulty": "Easy",
+      "question": "Given an array of integers nums and an integer target, return indices of the two numbers that add up to target. Exactly one solution exists.",
+      "hint": "Use a hash map to store complements. O(n) time.",
+      "explain": "Iterate once through the array. For each number, compute its complement (target - num) and check if it exists in a hash map.",
+      "timeC": "O(n)",
+      "spaceC": "O(n)",
+      "code": "def twoSum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in seen:\n            return [seen[diff], i]\n        seen[n] = i"
+    },
+    {
+      "id": 2,
+      "lc": 121,
+      "slug": "best-time-to-buy-and-sell-stock",
+      "title": "Best Time to Buy and Sell Stock",
+      "topic": "Arrays",
+      "difficulty": "Easy",
+      "question": "Given prices[i] as the stock price on day i, find the maximum profit from buying low and selling later.",
+      "hint": "Track min price so far.",
+      "explain": "Single pass greedy. Track minimum price and compute profit at each step.",
+      "timeC": "O(n)",
+      "spaceC": "O(1)",
+      "code": "def maxProfit(prices):\n    min_p = float('inf')\n    max_p = 0\n    for p in prices:\n        min_p = min(min_p, p)\n        max_p = max(max_p, p - min_p)\n    return max_p"
+    }
+  ]
